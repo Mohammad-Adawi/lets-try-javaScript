@@ -21,9 +21,6 @@ for ( var num = 1; num < 101; num ++ ) {
     else
       console.log( num );
   } 
-  
-  
-  
   /* 
   The second version of the program has a straightforward solution and a clever one. 
   The simple way is to add another “branch” to precisely test the given condition. 
