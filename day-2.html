@@ -10,6 +10,32 @@
 </head>
 <body>
     <h1>Let's Learn JavaScript! Day 2!</h1>
+    <form id="calculator" action="#" method="get">
+        <label for="operator">
+                select an operator:
+                <select name="operator" id="operator">
+                    <option value="add">Add</option>
+                    <option value="subtract">Subtract</option>
+                    <option value="divide">Divide</option>
+                    <option value="multiply">Multiply</option>
+                </select>
+        </label>
+        <label for="num1">
+            Enter First Number:
+            <input name="num1" id="num1" type="number">
+
+        </label>
+        <label for="num2">
+            Enter Second Number:
+            <input name="num2" id="num2" type="number">
+
+        </label>
+        <button type="submit" id="run-calc">
+            Run Calculation
+        </button>
+        <strong>Answer:</strong><em id="result"></em>
+
+    </form>
     <p id="my-paragraph">
         This is a paragraph!? wild!
     </p>
