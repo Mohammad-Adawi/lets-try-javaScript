@@ -28,3 +28,6 @@ button {
     margin: 1rem auto;
     cursor: pointer;
 }
+.my-link { /* Even works on dynamic elements! */
+    color: red;
+}
