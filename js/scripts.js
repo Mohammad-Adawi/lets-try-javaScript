@@ -41,11 +41,14 @@ for ( var i = 0; i < 5; i++ ) {
 
 // A basic function!
 function myFunction () {
+    var testerNum = 36; // Careful! We can't use this outside of the function... this is locally scoped!
     console.log( 'My function has run.' );
 }
 
+// console.log( 'TesterNum is: '+testerNum ); // What is defined in local scope, will not be available globally...
+
 // We have to call upon it, in order to run it, don't forget!
-myFunction();
+// myFunction();
 
 /**
  * Let's convert C# exercise 4 to a JavaScript program!
@@ -150,11 +153,30 @@ myArray.forEach( function( arrayItem ) {
             +' years old, and one of my hobbies is: \r\n' // Newline character!
             +this.hobbies[1]
             +'.' );
+     },
+     birthday: function() {
+        this.age++;
+        return this.age;
      }
  }
 
- myObject.age++; // Increment object's "age" property.
+ myObject.birthday(); // Increment object's "age" property.
  myObject.hobbies[1] = 'programming'; // Update array value in position "1".
+
+ // Let Bob speak!
+ // myObject.sayHi();
+
+ /*
+  * myObject.age
+  * is equivalent to...
+  * myObject['age']
+  */
+
+console.log( 'Looping through myObject:' );
+ // We can loop through properties in an object:
+ for ( var prop in myObject ) {
+    console.log( myObject[prop] );
+ }
 
 // Multi-line text can be included in a 
 var multiLineString = `
@@ -163,26 +185,3 @@ var multiLineString = `
 many lines!
 `;
 console.log( multiLineString );
-// make a loop that goes from 1 to 100
-for ( var num = 1; num < 101; num ++ ) {
-  
-  // check if the number is divisible by 3 or 5
-  var checkForThree = num % 3;
-  var checkForFive = num % 5;
-  
-  // if the number is divisible by both 3 and 5, then print FizzBuzz
-  if ( (checkForThree == 0) && (checkForFive == 0) ) 
-  	console.log( "FizzBuzz");
-  
-  // if the number is divisible by 3, then print Fizz
-  else if (checkForThree == 0)
-    console.log( "Fizz");
-  
-  // if the number is divisible by 5, then print Buzz
-  else if (checkForFive == 0)
-    console.log( "Buzz");
-  
-  // otherwise just print the number
-  else
-    console.log( num );
-} 
