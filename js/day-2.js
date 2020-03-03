@@ -15,4 +15,12 @@ myNumber = Number ( myNumber ); // Now it is a 64 bit floating point numeric! Th
 
 console.log( myNumber + 6 ); //Addition occurs!
 
-/** converting  */
+/** converting numbers to strings: */
+
+myNumber = myNumber.toString(); // the to String method will turn into a string!
+
+console.log( myNumber + 6 ); //Concatenation once more!
+
+/** * watch out! Auto-conversion can be.. interseting! always check your bases: */
+
+var myString = 'Hello world!'
