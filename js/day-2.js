@@ -24,3 +24,26 @@ console.log( myNumber + 6 ); //Concatenation once more!
 /** * watch out! Auto-conversion can be.. interseting! always check your bases: */
 
 var myString = 'Hello world!'
+console.log( 'Test 1:' );
+console.log( 'TType is:' + ( typeof myString));
+console.log( myString ); //'Hello world!'
+
+myString = 5;
+console.log( 'Test 2:' );
+console.log( 'TType is:' + ( typeof myString));
+console.log( myString );//5
+
+myString = myString * 3;
+console.log( 'Test 3:' );
+console.log( 'TType is:' + ( typeof myString));
+console.log( myString );//15
+
+myString = 'Updated string.';
+console.log( 'Test 4:' );
+console.log( 'TType is:' + ( typeof myString));
+console.log( myString );// Updated string.
+
+myString = { "another" : "string test!?" };
+    console.log( 'Test 5:' );
+    console.log( 'TType is:' + ( typeof myString));
+    console.log( myString );// { "another" : "string test!?" }
